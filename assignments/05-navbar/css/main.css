@@ -1,0 +1,445 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html {
+  line-height: 1.5;
+  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  margin: 0;
+}
+
+/* Update default margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+  margin: 0 0 1.5rem;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration-skip-ink: auto;
+  color: #36BF7F;
+}
+
+a:hover,
+a:focus-visible {
+  color: #D96666;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+svg {
+  fill: currentColor;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Containers ---------- */
+
+.container {
+  width: min(65em, 100%);
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.container--text {
+  width: min(45em, 100%);
+}
+
+/* ---------- Buttons --------------*/
+
+.btn{
+  background-color: #394a59;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.75em 2.2em;
+  display: inline-block;
+  text-align: center;
+  border-radius: 0.35rem;
+  text-decoration: none;
+  border-style: none;
+}
+
+.btn:hover,
+.btn:focus{
+  background-color: #59758d;
+  color: white;
+}
+
+.btn--secondary{
+  color: black;
+  background-color: #36BF7F;
+}
+
+.btn--secondary:hover{
+  color: #394a59;
+  background-color: #75d3a7;
+}
+
+.btn--outline{
+  color: #394a59;
+  background-color: white;
+  border: 0.2rem solid #394a59;
+  padding: 0.55rem 2.1rem;
+}
+
+.btn--outline:hover{
+  background-color: #394a59;
+  color: white;
+}
+
+.btn--small{
+  font-size: small;
+}
+
+.btn--large{
+  font-size: x-large;
+}
+
+
+/*Responsive Type Hierarchy*/
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold-italic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+html{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+h1 {
+  font-family: "Roboto", sans-serif;
+  margin-top: 0;
+  font-size: 1.802rem;
+  color:#36BF7F ;
+  font-weight: 700;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.602rem;
+    font-weight: 700;
+  }
+  
+h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.424rem;
+    color: #36BF7F;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-weight: 700;
+  }
+
+h4 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.266rem;
+    color: #d96666;
+    margin-bottom: 0;
+    font-weight: 700;
+  }
+
+h5 {
+    font-size: 1.125rem;}
+
+h6 {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.889rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-weight: 700;
+    }
+
+@media only screen and (min-width: 45em) {
+  h1 {
+    margin-top: 0;
+    font-size: 2.488rem;
+  }
+  
+  h2 {font-size: 2.074rem;}
+  
+  h3 {font-size: 1.728rem;}
+  
+  h4 {font-size: 1.44rem;}
+  
+  h5 {font-size: 1.2rem;}
+  
+  h6 {font-size: 0.833rem;}
+}
+
+@media only screen and (min-width: 60em) {
+
+  h1 {
+    margin-top: 0;
+    font-size: 3.052rem;
+  }
+  
+  h2 {font-size: 2.441rem;}
+  
+  h3 {font-size: 1.953rem;}
+  
+  h4 {font-size: 1.563rem;}
+  
+  h5 {font-size: 1.25rem;}
+  
+  h6 {font-size: 0.8rem;}
+  
+}
+
+/*--------------Footer-----------------*/
+
+.footer{
+  background-color: #394a59;
+  color: white;
+  border-bottom: 0.5rem solid #36BF7F;
+}
+
+.footer .container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer__logo{
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.footer__logo:hover,
+.footer__logo:focus{
+  color: #36BF7F;
+}
+.footer__icon{
+  width: 4rem;
+}
+
+.footer__title{
+  font-size: 1.525rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.footer__list{
+  padding-left:1.5rem;
+  margin: 0;
+  border-left: 0.125rem solid #36BF7F;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer__link{
+  color: white;
+  text-decoration: none;
+
+}
+
+.footer__link:hover,
+.footer__link:focus{
+  color: #36BF7F;
+}
+
+@media only screen and (min-width: 45em) {
+  .footer .container{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__logo{
+    flex:2 0;
+    align-self: flex-start;
+  }
+
+  .footer__nav,
+  .footer__copyright{
+    flex: 1 0;
+  }
+}
+
+/*---------Navbar-----------*/
+
+.navbar{
+  background-color: #394a59;
+  color: white;
+  border-top: 0.3rem solid #36BF7F;
+}
+
+.navbar .container {
+  padding-left: unset;
+  padding-right: unset;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.navbar__logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.75rem;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar__logo:hover,
+.navbar__logo:focus{
+  color: #36BF7F;
+}
+.navbar__icon{
+  width: 4rem;
+}
+
+.navbar__title{
+  font-family: "Roboto" sans-serif;
+  font-size: 1.525rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.navbar__list{
+  padding-left:unset;
+  margin: unset;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__link{
+  font-family: "Roboto" sans-serif;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 3rem;
+}
+
+.navbar__link:hover,
+.navbar__link:focus{
+  background-color: #36BF7F;
+  color: white;
+}
+
+@media only screen and (min-width: 45em) {
+  .navbar .container{
+    padding-top: unset;
+    flex-direction: row;
+  }
+
+  .navbar__logo{
+    margin-left: 1.5rem;
+    flex:2 0;
+    justify-content: flex-start;
+  }
+
+  .navbar__nav{
+    flex: 2 0;
+  }
+
+  .navbar__list{
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .navbar__list__item{
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-grow: 1;
+    
+  }
+  .navbar__link{
+    line-height: 4rem;
+  }
+}
