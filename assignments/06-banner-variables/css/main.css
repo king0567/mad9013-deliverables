@@ -1,3 +1,9 @@
+:root{
+  --banner-height: 50vh;
+  --banner-vertical-alignment: center;
+  --banner-horizontal-alignment: flex-start;
+  --banner-text-alignment: left;
+}
 /* Box sizing rules */
 *,
 *::before,
@@ -160,7 +166,7 @@ select {
   font-size: 1.150rem;
 }
 
-/*------ Basic Banner --------*/
+/*------ Banner-Variables --------*/
 
 .banner{
   background-image: linear-gradient(to bottom, #0009, #0009),url('../images/banner.jpg');
@@ -169,14 +175,31 @@ select {
 }
 
 .banner .container{
-  min-height: 50vh;
+  min-height: var(--banner-height);
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: var(--banner-horizontal-alignment);
+  align-items: var(--banner-vertical-alignment);
   padding-top: 3rem;
   padding-bottom: 3rem;
+  text-align: var(--banner-text-alignment);
 }
-
+.banner--large{
+  --banner-height: 70vh;
+}
+.banner--bottom{
+  --banner-vertical-alignment: flex-end;
+}
+.banner--top{
+  --banner-vertical-alignment: flex-start;
+}
+.banner--center{
+  --banner-horizontal-alignment: center;
+  --banner-text-alignment: center;
+}
+.banner--right{
+  --banner-horizontal-alignment: flex-end;
+  --banner-text-alignment: right;
+}
 .banner__content {
   width: min(35em, 100%);
 }
