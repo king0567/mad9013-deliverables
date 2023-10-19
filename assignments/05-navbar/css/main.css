@@ -417,6 +417,11 @@ h6 {
   .navbar .container{
     padding-top: unset;
     flex-direction: row;
+    /* ---------- prof comment ----------
+    
+    add the default padding back in to properly align with other containers on large screens
+    
+    ---------- end prof comment ---------- */
   }
 
   .navbar__logo{
