@@ -1,4 +1,10 @@
 :root{
+  /* ---------- prof comment ----------
+  
+  the banner variables should be scoped
+  to the .banner class
+  
+  ---------- end prof comment ---------- */
   --banner-height: 50vh;
   --banner-vertical-alignment: center;
   --banner-horizontal-alignment: flex-start;
@@ -169,6 +175,11 @@ select {
 /*------ Banner-Variables --------*/
 
 .banner{
+  /* ---------- prof comment ----------
+  
+  put your variable definitions for the banner here
+  
+  ---------- end prof comment ---------- */
   background-image: linear-gradient(to bottom, #0009, #0009),url('../images/banner.jpg');
   background-position: center;
   background-size: cover;
