@@ -177,6 +177,11 @@ select {
   grid-template-columns: 1fr;
   gap: 1.5rem;
   padding-left: unset;
+  /* ---------- prof comment ----------
+  
+  also remove the default margin for consistency
+  
+  ---------- end prof comment ---------- */
 }
 
 .card-group__card{
