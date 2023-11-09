@@ -305,10 +305,7 @@ h6 {
 .card__image::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
   background-image: linear-gradient(to bottom, #0007, #0007);
   border-radius: 0.5rem;
 }
