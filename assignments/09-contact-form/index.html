@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <section class="contact">
+        <div class="container">
+            <div class="contact__wrap">
+
+                <form action="#" class="contact__form">
+
+                    <div class="form-unit full">
+                        <h1 class="contact__title">Contact Us</h1>
+                    </div>
+
+                    <div class="form-unit full">
+                        <label for="fullName">Full Name*</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <div class="form-unit">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-unit">
+                        <label for="tel">Phone*</label>
+                        <input type="tel" id="tel" name="tel" required>
+                    </div>
+
+                    <div class="form-unit full">
+                        <p class="label full">Preferred Contact Method:</p>
+                        <div class="radio">
+                            <div class="radio--unit">
+                                <input type="radio" id="contact-email" name="contact-preferred">
+                                <label class="label-small" for="contact-email">Email</label>
+                            </div>
+
+                            <div class="radio--unit">
+                                <input type="radio" id="contact-phone" name="contact-preferred">
+                                <label class="label-small" for="contact-phone">Phone</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-unit full">
+                        <label for="subject">Subject*</label>
+                        <input type="text" id="subject" name="subject" list="subjects" required>
+                        <datalist id="subjects">
+                            <option value="Sales">Sales</option>
+                            <option value="Pricing">Pricing</option>
+                            <option value="Support">Support</option>
+                            <option value="Careers">Careers</option>
+                        </datalist>
+                    </div>
+
+                    <div class="form-unit full">
+                        <label for="message">Message*</label>
+                        <textarea name="message" id="message" required></textarea>
+                    </div>
+
+                    <div class="form-unit check--unit full">
+                        <input type="checkbox" id="consent" name="consent" required/>
+                        <label class="label-small" for="consent">I consent to the <a href="#">Terms and Services</a>.</label>
+                    </div>
+
+                    <div class="form-unit full">
+                        <input class="btn" type="submit" value="Submit">
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
