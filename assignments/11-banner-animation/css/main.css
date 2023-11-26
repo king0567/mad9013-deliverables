@@ -1,0 +1,263 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html {
+  line-height: 1.5;
+  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  margin: 0;
+}
+
+/* Update default margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+  margin: 0 0 1.5rem;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration-skip-ink: auto;
+  color: #36BF7F;
+}
+
+a:hover,
+a:focus-visible {
+  color: #D96666;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+svg {
+  fill: currentColor;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Containers ---------- */
+
+.container {
+  width: min(65em, 100%);
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.container--text {
+  width: min(45em, 100%);
+}
+
+/*------ Buttons --------*/
+
+.btn{
+  background-color: #394a59;
+  font-family: "Roboto";
+  font-size: inherit;
+  cursor: pointer;
+  color: white;
+  padding: 0.55em 1.5em .5em;
+  display: inline-block;
+  text-align: center;
+  border-radius: .25em;
+  text-decoration: none;
+  border-style: none;
+}
+
+.btn:hover,
+.btn:focus{
+  background-color: #59758d;
+  color: white;
+}
+
+.btn--secondary{
+  color: black;
+  background-color: #36BF7F;
+}
+
+.btn--secondary:hover{
+  color: #394a59;
+  background-color: #75d3a7;
+}
+
+.btn--outline{
+  color: #394a59;
+  background-color: white;
+  border: 0.2rem solid #394a59;
+  padding: 0.55rem 2.1rem;
+}
+
+.btn--outline:hover{
+  background-color: #394a59;
+  color: white;
+}
+
+.btn--small{
+  font-size: small;
+}
+
+.btn--large{
+  font-size: 1.150rem;
+}
+
+/*------ Banner-Variables --------*/
+
+.banner{
+  --banner-height: 50vh;
+  --banner-vertical-alignment: center;
+  --banner-horizontal-alignment: flex-start;
+  --banner-text-alignment: left;
+  background-image: linear-gradient(to bottom, #0009, #0009),url('../images/banner.jpg');
+  background-position: center;
+  background-size: cover;
+
+  .banner__title,
+  .banner__text,
+  .btn{
+    animation: slide_in 0.5s 0.5s forwards;
+    translate: -3rem;
+    opacity: 0;
+  }
+
+  .banner__text{
+    animation-delay: 0.7s;
+  }
+
+  .btn{
+    animation-delay: 0.9s;
+  }
+}
+
+@keyframes slide_in {
+  from{
+    translate: -3rem;
+    opacity: 0;
+  }
+  to{
+    translate: 0;
+    opacity: 1;
+  }
+}
+
+.banner .container{
+  min-height: var(--banner-height);
+  display: flex;
+  justify-content: var(--banner-horizontal-alignment);
+  align-items: var(--banner-vertical-alignment);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: var(--banner-text-alignment);
+}
+.banner--large{
+  --banner-height: 70vh;
+}
+.banner--bottom{
+  --banner-vertical-alignment: flex-end;
+}
+.banner--top{
+  --banner-vertical-alignment: flex-start;
+}
+.banner--center{
+  --banner-horizontal-alignment: center;
+  --banner-text-alignment: center;
+}
+.banner--right{
+  --banner-horizontal-alignment: flex-end;
+  --banner-text-alignment: right;
+}
+.banner__content {
+  width: min(35em, 100%);
+}
+
+.banner__title{
+  font-size: 1.756rem;
+  line-height: 1.3;
+  color: #36BF7F;
+}
+
+.banner__text{
+  font-size: 1.150rem;
+  color: white;
+}
+
+@media only screen and (min-width: 45em) {
+
+  .banner__title{
+    font-size:2.069rem;
+  }
+  .banner__text,
+  .btn--large{
+    font-size: 1.200rem;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+
+  .banner__title{
+    font-size:2.444rem;
+  }
+  .banner__text,
+  .btn--large{
+    font-size: 1.250rem;
+  }
+}
