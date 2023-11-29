@@ -185,6 +185,12 @@ select {
 
 
 /*-----------Type-Scale------------*/
+/* ---------- prof comment ----------
+
+this ruleset is unnecessary, its already
+all set in the CSS Reset
+
+---------- end prof comment ---------- */
 html{
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -330,6 +336,12 @@ h6 {
   font-size: clamp(1rem, 2.5cqi, 1.350rem);
 }
 
+/* ---------- prof comment ----------
+
+scope this to the card:
+`.card--full-image .btn`
+
+---------- end prof comment ---------- */
 .btn{
   font-size: clamp(1rem, 2.5cqi, 1.350rem);
 }
