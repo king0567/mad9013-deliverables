@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *:focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-secondary;
+  }
+
+  html {
+    @apply font-body;
+  }
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  h2 {
+    @apply text-3xl font-bold;
+  }
+  h3 {
+    @apply text-2xl font-bold uppercase;
+  }
+  h4 {
+    @apply text-xl font-bold;
+  }
+  h5 {
+    @apply text-lg font-bold;
+  }
+  h6 {
+    @apply text-base font-bold;
+  }
+
+  a {
+    @apply transition hover:text-accent focus:text-accent;
+  }
+}
+
+@layer components {
+  .hero {
+    background-image: url("../images/banner-1.jpg");
+  }
+
+  .btn {
+    @apply inline-block rounded-md border-2 border-secondary bg-secondary px-[1.5em] py-[0.5em] text-center font-bold uppercase tracking-wider text-white no-underline transition hover:border-accent hover:bg-accent hover:text-primary focus:border-accent focus:bg-accent focus:text-primary;
+  }
+
+  .btn--outline {
+    @apply bg-transparent text-secondary hover:border-secondary-dark hover:bg-secondary-dark hover:text-white focus:border-secondary-dark focus:bg-secondary-dark focus:text-white;
+  }
+}
