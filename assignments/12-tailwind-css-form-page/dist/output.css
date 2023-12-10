@@ -2152,6 +2152,14 @@ a:focus {
   padding: 1rem;
 }
 
+.p-10 {
+  padding: 2.5rem;
+}
+
+.p-12 {
+  padding: 3rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -2287,8 +2295,17 @@ a:focus {
   font-size: clamp(1.44rem, 3vw, 1.777rem);
 }
 
+.text-5xl {
+  font-size: clamp(2.986rem, 7.5vw, 5.61rem);
+  line-height: 1.1;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .uppercase {
@@ -2875,6 +2892,11 @@ a:focus {
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .md\:text-left {
